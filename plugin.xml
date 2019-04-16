@@ -1,0 +1,23 @@
+<plugin id="org.dita-community.glossary.preprocess" version="0.0.1">
+  <!-- 
+      Extends preprocessing to augment or adjust maps to 
+      do glossary generation, filtering, and sorting.
+      
+      It does not provide any transformation types
+      -->
+  <require plugin="org.dita.base"/>
+  <require plugin="org.dita-community.common.xslt"/>
+  <require plugin="org.dita-community.i18n"/>
+  
+  <feature extension="package.support.name" value="Eliot Kimber"/>
+  <feature extension="package.support.email" value="ekimber@contrext.com"/>
+  
+  <extension-point id="org.dita-community.glossary.preprocess.xsl" name="Glossary Preprocess XSLT import"/>
+  <template file="xsl/glossary-preprocess_template.xsl"/>  
+  
+
+  <feature extension="dita.xsl.mapref" value="xsl/glossary-preprocess.xsl" type="file"/>
+  <feature extension="dita.preprocess.mapref.param" value="mapref-params.xml" type="file"/>
+  
+    
+</plugin>

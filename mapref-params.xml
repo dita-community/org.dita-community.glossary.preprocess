@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<params xmlns:if="ant:if">
+  <param name="{http://org.dita-community}sort-glossary" value="${dita-community.sort-glossary}" if:set="dita-community.sort-glossary"/>
+  <param name="{http://org.dita-community}filter-glossary" value="${dita-community.filter-glossary}" if:set="dita-community.filter-glossary"/>
+  <param name="{http://org.dita-community}generate-glossary" value="${dita-community.generate-glossary}" if:set="dita-community.generate-glossary"/>
+</params>
