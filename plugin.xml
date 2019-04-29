@@ -1,4 +1,4 @@
-<plugin id="org.dita-community.glossary.preprocess" version="0.0.1">
+<plugin id="org.dita-community.glossary.preprocess" version="0.9.0">
   <!-- 
       Extends preprocessing to augment or adjust maps to 
       do glossary generation, filtering, and sorting.

@@ -1,5 +1,7 @@
 # org.dita-community.glossary.preprocess Open Toolkit Plugin
 
+Version: 0.9.0, 29 April 2019
+
 Preprocessing extension that automates the generation and sorting of glossaries.
 
 Extends the preprocess `keyref` phase. Modifies the resolved map to reflect the glossary manipulation options requested.
@@ -11,6 +13,28 @@ Recognizes `glossgroup` topics as containers of other glossary groups or glossar
 Provides an extension point, `org.dita-community.glossary.preprocess.xsl`, for adding custom processing as needed, for example, to recognize elements other than `glosslist` as glossary containers or generation signalers. 
 
 OT version: 3.3+
+
+## Installation
+
+You can install the plugin using the OT's `--install` command directly from the DITA OT's plugin registry (https://www.dita-ot.org/plugins):
+
+```
+bin/dita --install org.dita-community.glossary.preprocess
+```
+
+However, OT 3.3.1 has a bug that may cause the installation of the dependencies to fail (the bug should be fixed on OT 3.3.2).
+
+If you get this failure, the workaround is simply to install the dependencies individually, and then the glossary preprocess plugin, in this order:
+
+```
+bin/dita --force --install org.dita-community.common.xslt
+bin/dita --force --install org.dita-community.i18n
+bin/dita --install org.dita-community.glossary.preprocess
+```
+
+(Use the `--force` parameter to ensure that you have the latest version of each plugin).
+
+If you decide to uninstall the plugins using the `--uninstall` command, note that there's an unavoidable issue with uninstalling the i18n plugin. See the i18n plugin readme file for details (https://github.com/dita-community/org.dita-community.i18n).
 
 ## Dependencies:
 
